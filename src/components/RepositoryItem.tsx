@@ -1,4 +1,12 @@
-function RepositoryItem({ repository }) {
+type RepositoryItemProps = {
+  repository: {
+    full_name: string;
+    description: string;
+    html_url: string;
+  };
+};
+
+function RepositoryItem({ repository }: RepositoryItemProps) {
   return (
     <li>
       <strong>{repository?.full_name ?? "Default"}</strong>
