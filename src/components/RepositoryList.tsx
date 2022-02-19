@@ -5,8 +5,15 @@ import { RepositoryItem } from "./RepositoryItem";
 
 import "../styles/repositories.scss";
 
+type Repository = {
+  name: string;
+  full_name: string;
+  description: string;
+  html_url: string;
+};
+
 function RepositoryList() {
-  const [repositories, setRepositories] = useState([]);
+  const [repositories, setRepositories] = useState<Repository[]>([]);
 
   useEffect(() => {
     axios({
