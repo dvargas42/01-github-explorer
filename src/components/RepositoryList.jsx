@@ -1,4 +1,3 @@
-import { Counter } from "./Counter"
 import { RepositoryItem } from "./RepositoryItem"
 
 const repository2 = {
